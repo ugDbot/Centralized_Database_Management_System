@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>Ugochukwu Akwitti: Mr Yusuf Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'website/assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'website/assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><strong>Centralized Data Management Database (CDMD)</strong></li>
+							<li><a href="#intro">NIMC</a></li>
+							<li><a href="#one">INEC</a></li>
+							<li><a href="#two">NIS</a></li>
+							<li><a href="#three">FRSC</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style2 spotlights">
+						<div class="inner">
+							<a href="#" class="image"><img src="{% static 'website/images/Nimc-logo.png' %}" alt="" data-position="center center" /></a>
+							<h1>National Identity Management Commission</h1>
+							<p>
+The National Identity Management Commission (NIMC) established by the NIMC Act No. 23 of 2007, has the mandate to establish, own, operate, maintain and manage the National Identity Database in Nigeria, register persons covered by the Act, assign a Unique National Identification Number (NIN) and issue General Multi-Purpose Cards (GMPC) to those who are citizens of Nigeria as well as others legally residing within the country.
+The NIMC Act 2007 provides for the establishment of the NIMC, its functions, powers, establishment of the National Identity Database, assignment of the National Identification Number (NIN) as well as issuance of token General Multi-purpose cards. The Act also provides the Commission with powers to make regulations connected with its functions. The NIMC Act 2007 provides the repeal of the law that created the former Department of National Civic Registration (DNCR) and the transfer of its assets and liabilities to the NIMC.</p>
+						</div>
+					</section>
+
+				<!-- One -->
+				<section id="one" class="wrapper style2 spotlights">
+						<div class="inner">
+							<a href="#" class="image"><img src="{% static 'website/images/inec.jpg' %}" alt="" data-position="center center" /></a>
+							<h1>Independent National Electoral Commission</h1>
+							<p>
+The Independent National Electoral Commission (INEC) was established by the 1999 Constitution of the Federal Republic of Nigeria to among other things organize elections into various political offices in the country.</p>
+						</div>
+					</section>
+
+
+
+				<!-- Two -->
+				<section id="two" class="wrapper style2 spotlights">
+						<div class="inner">
+							<a href="#" class="image"><img src="{% static 'website/images/Immigration.jpg' %}" alt="" data-position="center center" /></a>
+							<h1>Nigeria Immigration Service</h1>
+							<p>
+The Nigeria Immigration Service (NIS) is governmental organization responsible for border security and migration management in Nigeria. It was established by the Act of Parliament in 1963.[2][3] In 2015, the 1963 Act was repelled and replaced with the Immigration Act 2015 which positions the service with the legal instrument to combat Smuggling of Migrant(SOM) in Nigeria.</p>
+						</div>
+					</section>
+
+
+				<!-- Three -->
+				<section id="three" class="wrapper style2 spotlights">
+						<div class="inner">
+							<a href="#" class="image"><img src="{% static 'website/images/frsc.jpg' %}" alt="" data-position="center center" /></a>
+							<h1>Federal Road Safety Commission</h1>
+							<p>
+The Mission of the Corps is to Regulate, Enforce and Coordinate all Road Traffic and Safety Management activities through: o Sustained public enlightenment o Promotion of stakeholder’s cooperation o Robust data management o Improved vehicle administration o Prompt rescue services o Effective patrol operation.</p>
+						</div>
+					</section>
+
+				<!-- Authentication -->
+				<section
+					id="four" class="wrapper style2 spotlights">
+					<div class="inner">
+						<p>
+						</p>
+						{% if user.is_authenticated %}
+						<h1>Logout here...</h1>
+						<ul class="actions">
+								<li><a href="{% url 'logout' %}" class="button scrolly">Logout</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="{% static 'website/generic.html' %}" class="button scrolly">Database</a></li>
+							</ul>
+						{% else %}
+						<h1>Login to see database or Sign Up here...</h1>
+						<ul class="actions">
+								<li><a href="{% url 'Login' %}" class="button scrolly">Login</a></li>
+							</ul>
+						<ul class="actions">
+								<li><a href="{% url 'register' %}" class="button scrolly">Sign up</a></li>
+							</ul>
+						{% endif %}
+
+					</div>
+				</section>
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="{% static 'website/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'website/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'website/assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'website/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'website/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'website/assets/js/util.js' %}"></script>
+			<script src="{% static 'website/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
